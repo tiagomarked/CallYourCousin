@@ -4,6 +4,8 @@ Call Your Cousin is a My Summer Car mod that lets you use the home phone to call
 
 This mod also adds 2 new fully functional payphones to the game: one located at the town, near Teimo's Pub and the other located near Fleetari's.
 
+Make sure to check the [Nexus Mods](https://www.nexusmods.com/mysummercar/mods/203/?tab=description) page for a more detailed description and screenshots!
+
 ## Requirements
 
 - **Latest version** of My Summer Car
@@ -11,7 +13,7 @@ This mod also adds 2 new fully functional payphones to the game: one located at 
 
 ## Installation
 
-1. Download the mod from [GitHub](https://github.com/tiagomarked/CallYourCousin/releases) or [NexusMods](https://www.nexusmods.com/mysummercar/mods/203/).
+1. Download the mod from [GitHub](https://github.com/tiagomarked/CallYourCousin/releases) or [Nexus Mods](https://www.nexusmods.com/mysummercar/mods/203/?tab=files).
 2. Navigate to your MSC Mod Loader Mods folder (ex. C:\Steam\steamapps\common\My Summer Car\Mods) and paste the CallYourCousin.dll there.
 3. It's installed, you can now launch the game!
 
