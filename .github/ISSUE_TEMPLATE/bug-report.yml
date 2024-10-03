@@ -1,0 +1,33 @@
+name: Bug Report
+description: Submit a bug report for CallYourCousin.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        [Please read the mod description before submitting a bug report](https://www.nexusmods.com/mysummercar/mods/203?tab=description)
+  - type: input
+    id: mscloaderVer
+    attributes:
+      label: MSCLoader version
+      description: What is your MSCLoader version
+      placeholder: ex. 1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description
+      description: Describe the bug: what happened, what was supposed to happen, what mods are you using and the steps to reproduce the bug.
+      placeholder: Describe the bug here...
+    validations:
+      required: true      
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attachments
+      description: Please attach the file "output_log.txt" located on your game's folder [REQUIRED]. You can also attach screenshots here.
+      placeholder: Drag and drop output_log.txt and any other relevant attachments here.
+    validations:
+      required: true       
