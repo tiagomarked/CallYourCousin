@@ -19,7 +19,7 @@ body:
     id: what-happened
     attributes:
       label: Description
-      description: Describe the bug: what happened, what was supposed to happen, what mods are you using and the steps to reproduce the bug.
+      description: Describe the bug, what happened, what was supposed to happen, what mods are you using and the steps to reproduce the bug.
       placeholder: Describe the bug here...
     validations:
       required: true      
