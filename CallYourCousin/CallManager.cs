@@ -32,18 +32,18 @@ namespace CallYourCousin
 
         void Start()
         {
-            InvokeRepeating("DecreaseAnnoyance", 0, 60);
+            TimeScheduler.ScheduleAction(0, 0, DecreaseAnnoyance);
         }
 
         void DecreaseAnnoyance()
         {
-            if (Utils.globalDay.Value == Utils.lastResetDay.Value)
+            if (GameTime.Day == Utils.lastResetDay.Value)
                 return;
 #if DEBUG
             ModConsole.Print("Running Decrease Annoyance");
 #endif
             Utils.IncreaseAnnoyance(-UnityEngine.Random.Range(5, 30));
-            Utils.lastResetDay.Value = Utils.globalDay.Value;
+            Utils.lastResetDay.Value = GameTime.Day;
         }
 
         public IEnumerator MakeCall(int waypoint, Action<bool> onCallEnd, bool homeRoute = false)

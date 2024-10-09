@@ -48,7 +48,6 @@ namespace CallYourCousin
 #if Mini
         public static PretendFsmVar<float> annoyance { get; private set; }
         public static PretendFsmVar<int> lastResetDay { get; private set; }
-        public static PretendFsmVar<int> globalDay { get; private set; }
         public static PretendFsmVar<int> carCurrentWaypointIndex { get; private set; }
         public static PretendFsmVar<float> playerMoney { get; private set; }
         public static PretendFsmVar<float> playerStress { get; private set; }
@@ -59,12 +58,11 @@ namespace CallYourCousin
         public static PretendFsmVar<bool> isRallyDay { get; private set; }
 #else
         public static SavedVariable<float> annoyance = new SavedVariable<float>("annoyance", 0.0f);
-        public static SavedVariable<int> lastResetDay = new SavedVariable<int>("lastResetDay", 0);
+        public static SavedVariable<GameTime.Days> lastResetDay = new SavedVariable<GameTime.Days>("lastResetDay", GameTime.Days.Monday);
 
         public static FsmGameObject carCurrentRoute { get; private set; }
         public static FsmGameObject carCurrentWaypoint { get; private set; }
         public static FsmInt carCurrentWaypointIndex { get; private set; }
-        public static FsmInt globalDay { get; private set; }
         public static FsmFloat playerMoney { get; private set; }
         public static FsmFloat playerStress { get; private set; }
         public static FsmString subtitle { get; private set; }
@@ -89,7 +87,6 @@ namespace CallYourCousin
             blood = carCrashEvent.transform.Find("Blood").gameObject;
 
             // Assign Global FSM vars
-            globalDay = FsmVariables.GlobalVariables.GetFsmInt("GlobalDay");
             playerMoney = FsmVariables.GlobalVariables.GetFsmFloat("PlayerMoney");
             playerStress = FsmVariables.GlobalVariables.GetFsmFloat("PlayerStress");
             subtitle = FsmVariables.GlobalVariables.GetFsmString("GUIsubtitle");
