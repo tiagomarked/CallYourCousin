@@ -23,8 +23,6 @@ namespace CallYourCousin
         {
             if (Input.GetKeyDown(KeyCode.F6))
                 TogglePlayerMoney();
-            else if (Input.GetKeyDown(KeyCode.F7))
-                ToggleFollowCousin();
             else if (Input.GetKeyDown(KeyCode.F8))
                 ToggleFastForward();
             else if (Input.GetKeyDown(KeyCode.F9))
@@ -35,6 +33,9 @@ namespace CallYourCousin
                 PlayerToPub();
             else if (Input.GetKeyDown(KeyCode.F12))
                 PlayerToAutoShop();
+
+            if (Input.GetKey(KeyCode.F7))
+                TeleportToCousin();
         }
 
         void TogglePlayerMoney()
@@ -60,10 +61,15 @@ namespace CallYourCousin
             followCousin = true;
             while (followCousin)
             {
-                Utils.playerTransform.position = Utils.car.transform.position + new Vector3(0, 4, 0);
+                TeleportToCousin();
                 yield return new WaitForEndOfFrame();
             }
             Utils.playerTransform.position = originalPos;
+        }
+
+        void TeleportToCousin()
+        {
+            Utils.playerTransform.position = Utils.car.transform.position + new Vector3(0, 4, 0);
         }
 
         void ToggleFastForward()
