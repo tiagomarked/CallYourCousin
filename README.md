@@ -22,5 +22,6 @@ Make sure to check the [Nexus Mods](https://www.nexusmods.com/mysummercar/mods/2
 This program is distributed under GNU General Public License v3. Feel free to use its source code as long as you mention the author and state the changes. You can also modify, share and distribute it, as long as you state changes. For more, see [LICENSE](LICENSE.txt) file.
 
 ## Credits
+Thanks to:
  - Rasvis - Voice Acting
  - BrennFuchs - Payphone's Rust Material
