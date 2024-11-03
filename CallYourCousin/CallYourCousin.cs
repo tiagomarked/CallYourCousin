@@ -10,13 +10,14 @@ public class CallYourCousin : Mod
     public override string ID => "CallYourCousin";
     public static string buildUUID = Guid.NewGuid().ToString();
     public override string Author => "sykovanz";
-    public override string Version => "2.0";
-#if Release
-    public override string Name => "Call Your Cousin";
-    public override string Description => "Call Your Cousin™️ from your home phone or the two payphones located near Teimo's pub and Freetari's to get a free ride!";
-#else
+    public override string Version => "2.1";
+#if DEBUG
     public override string Name => "Call Your Cousin <color=aqua>[Early Access]</color>";
     public override string Description => "Build ID: <color=aqua>" + buildUUID + "</color>";
+    
+#else
+    public override string Name => "Call Your Cousin";
+    public override string Description => "Call Your Cousin™️ from your home phone or the two payphones located near Teimo's pub and Freetari's to get a free ride!";
 #endif
 
     public override void ModSetup()
